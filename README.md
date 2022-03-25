@@ -4,10 +4,10 @@ Number of daily visits of Wikipedia mathematics topics with Neural Machine Learn
 
 ## Benchmark
 
-| k | linear digit | node features | filters | lr | time | error |
-| -- | ------ | ------- | ----- | --------- | ---------------- |
-| 2 | 1 | 14 | 32 | 0.01 | 911s | 0.8143236637115479 |
-| 3 | 1 | 14 | 32 | 0.01 | 1444s | 0.8163800835609436 |
+|  k | linear digit | node features | filters |  lr  |  time  |  error  |
+| -- | ------------ | ------------- | ------- | ---- | ------ | ------- |
+| 2  |       1      |    14   | 32 | 0.01 | 911s | 0.8143236637115479 |
+| 3  |       1      |    14   | 32 | 0.01 | 1444s | 0.8163800835609436 |
 
 ## Authors
 
