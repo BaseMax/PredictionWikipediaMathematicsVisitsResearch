@@ -1,5 +1,7 @@
 # Wikipedia Mathematics
 
+## Improving Prediction of Daily Visits of Wikipedia Mathematics Topics using Graph Neural Networks
+
 Number of daily visits of Wikipedia mathematics topics with Neural Machine Learning Model
 
 ## Benchmark
