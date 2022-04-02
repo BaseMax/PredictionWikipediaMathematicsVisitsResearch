@@ -60,7 +60,8 @@ Number of daily visits of Wikipedia mathematics topics with Neural Machine Learn
 |50|16|50% | 1 | 1 | 16 | 16 | 0.01 | xxxxx | xxxxx |
 |51|16|60% | 1 | 1 | 16 | 16 | 0.01 | xxxxx | xxxxx |
 |52|16|70% | 1 | 1 | 16 | 16 | 0.01 | xxxxx | xxxxx |
-|53|16|90% | 1 | 1 | 16 | 16 | 0.01 | xxxxx | xxxxx |
+|53|16|80% | 1 | 1 | 16 | 16 | 0.01 | xxxxx | xxxxx |
+|54|16|90% | 1 | 1 | 16 | 16 | 0.01 | xxxxx | xxxxx |
 
 ## Authors
 
