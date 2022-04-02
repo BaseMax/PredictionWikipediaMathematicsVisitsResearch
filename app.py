@@ -1597,6 +1597,58 @@ tests = [
     # Error
     # mat1 and mat2 shapes cannot be multiplied (1068x32 and 16x16)
 ]
+
+tests = [
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":16,
+        "train_ratio":0.3
+    },
+
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":16,
+        "train_ratio":0.4
+    },
+
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":16,
+        "train_ratio":0.6
+    },
+
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":16,
+        "train_ratio":0.7
+    },
+
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":16,
+        "train_ratio":0.9
+    },
+]
 print(tests)
 print(len(tests))
 
