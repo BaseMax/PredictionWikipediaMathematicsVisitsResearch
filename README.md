@@ -21,11 +21,13 @@ Number of daily visits of Wikipedia mathematics topics with Neural Machine Learn
 
 - **Behzad Soleimani Neysiani**
 
-  - Department of Computer Engineering, Faculty of Electrical & Computer Engineering
+  - Technical Soldier, Department of Research and Development
+
+  - Ava Aria Information Company, Demis Holding, Isfahan, Iran,
 
   - University of Kashan, Kashan, Iran
 
-  - behzad@kashanu.ac.ir
+  - b.soleimani@demisco.com
 
 - **Seyyed Ali Mohammadiyeh**
 
