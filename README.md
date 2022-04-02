@@ -36,8 +36,6 @@ Number of daily visits of Wikipedia mathematics topics with Neural Machine Learn
 
   - Ava Aria Information Company, Demis Holding, Isfahan, Iran,
 
-  - University of Kashan, Kashan, Iran
-
   - b.soleimani@demisco.com
 
 - **Seyyed Ali Mohammadiyeh**
