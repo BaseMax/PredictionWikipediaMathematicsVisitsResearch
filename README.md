@@ -57,10 +57,10 @@ Number of daily visits of Wikipedia mathematics topics with Neural Machine Learn
 |47|14|90% | 1 | 1 | 14 | 32 | 0.01 | 783s | 0.66766756772995 |
 |48|16|30% | 1 | 1 | 16 | 16 | 0.01 | 271s | 1.089638352394104 |
 |49|16|40% | 1 | 1 | 16 | 16 | 0.01 | 345s | 0.8601189255714417 |
-|50|16|50% | 1 | 1 | 16 | 16 | 0.01 | xxxxx | xxxxx |
+|50|16|50% | 1 | 1 | 16 | 16 | 0.01 | 419s | 0.8372963070869446 |
 |51|16|60% | 1 | 1 | 16 | 16 | 0.01 | 517s | 0.8800567984580994 |
 |52|16|70% | 1 | 1 | 16 | 16 | 0.01 | 600s | 1.3647654056549072 |
-|53|16|80% | 1 | 1 | 16 | 16 | 0.01 | xxxxx | xxxxx |
+|53|16|80% | 1 | 1 | 16 | 16 | 0.01 | 677s | 0.8518020510673523 |
 |54|16|90% | 1 | 1 | 16 | 16 | 0.01 | 781s | 0.6800107955932617 |
 
 ## Authors
@@ -80,5 +80,3 @@ Number of daily visits of Wikipedia mathematics topics with Neural Machine Learn
   - University of Kashan, Kashan, Iran
 
   - alim@kashanu.ac.ir, alim.ir@ieee.org
-
-
