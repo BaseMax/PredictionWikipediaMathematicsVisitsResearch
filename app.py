@@ -1474,6 +1474,116 @@ tests = [
 
 
 ]
+
+tests = [
+    # e = 7, lags = 32, k=1 , lin_dig = 1, node_feature = 16, filter = 16 , lr = 0.01, train_test = 0.5,0.7,0.9
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":14,
+    #     "filters":32,
+    #     "lr":0.01,
+    #     "lags":14,
+    #     "train_ratio":0.3
+    # },
+    # {'k': 1, 'linear_digit': 1, 'node_features': 14, 'filters': 32, 'lr': 0.01, 'lags': 14, 'train_ratio': 0.3}
+    # 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [04:19<00:00,  5.19s/it]
+    # MSE: 1.0906
+    # MSE: 1.0906275511
+    # 1.0906275510787964
+    # Execution time in seconds: 268.4892053604126
+    # ====================================
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":14,
+    #     "filters":32,
+    #     "lr":0.01,
+    #     "lags":14,
+    #     "train_ratio":0.4
+    # },
+    # {'k': 1, 'linear_digit': 1, 'node_features': 14, 'filters': 32, 'lr': 0.01, 'lags': 14, 'train_ratio': 0.4}
+    # 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [05:54<00:00,  7.09s/it]
+    # MSE: 0.8775
+    # MSE: 0.8774722815
+    # 0.8774722814559937
+    # Execution time in seconds: 362.50277638435364
+    # ====================================
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":14,
+    #     "filters":32,
+    #     "lr":0.01,
+    #     "lags":14,
+    #     "train_ratio":0.6
+    # },
+    # {'k': 1, 'linear_digit': 1, 'node_features': 14, 'filters': 32, 'lr': 0.01, 'lags': 14, 'train_ratio': 0.6}
+    # 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [08:47<00:00, 10.55s/it]
+    # MSE: 0.8744
+    # MSE: 0.8744056225
+    # 0.8744056224822998
+    # Execution time in seconds: 532.7825939655304
+    # ====================================
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":14,
+    #     "filters":32,
+    #     "lr":0.01,
+    #     "lags":14,
+    #     "train_ratio":0.7
+    # },
+    # {'k': 1, 'linear_digit': 1, 'node_features': 14, 'filters': 32, 'lr': 0.01, 'lags': 14, 'train_ratio': 0.7}
+    # 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [10:28<00:00, 12.56s/it]
+    # MSE: 1.3145
+    # MSE: 1.3144520521
+    # 1.314452052116394
+    # Execution time in seconds: 632.4220359325409
+
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.9
+    },
+
+
+    # e = 7, lags = 32, k=1 , lin_dig = 1, node_feature = 16, filter = 16 , lr = 0.01, train_test = 0.5,0.7,0.9
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.5
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.9
+    },
+]
 print(tests)
 print(len(tests))
 
@@ -1512,5 +1622,5 @@ for test in tests:
         #####script#####
         executionTime = (time.time() - startTime)
         print('Execution time in seconds: ' + str(executionTime))
-    except:
-        print("Error!\n")
+    except Exception as e:
+        print("Error!\n", e)
