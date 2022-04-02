@@ -1544,45 +1544,58 @@ tests = [
     # 1.314452052116394
     # Execution time in seconds: 632.4220359325409
 
-    {
-        "k":1,
-        "linear_digit":1,
-        "node_features":14,
-        "filters":32,
-        "lr":0.01,
-        "lags":14,
-        "train_ratio":0.9
-    },
-
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":14,
+    #     "filters":32,
+    #     "lr":0.01,
+    #     "lags":14,
+    #     "train_ratio":0.9
+    # },
+    # {'k': 1, 'linear_digit': 1, 'node_features': 14, 'filters': 32, 'lr': 0.01, 'lags': 14, 'train_ratio': 0.9}
+    # 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [13:02<00:00, 15.65s/it]
+    # MSE: 0.6677
+    # MSE: 0.6676675677
+    # 0.66766756772995
+    # Execution time in seconds: 783.8723146915436
 
     # e = 7, lags = 32, k=1 , lin_dig = 1, node_feature = 16, filter = 16 , lr = 0.01, train_test = 0.5,0.7,0.9
-    {
-        "k":1,
-        "linear_digit":1,
-        "node_features":16,
-        "filters":16,
-        "lr":0.01,
-        "lags":32,
-        "train_ratio":0.5
-    },
-    {
-        "k":1,
-        "linear_digit":1,
-        "node_features":16,
-        "filters":16,
-        "lr":0.01,
-        "lags":32,
-        "train_ratio":0.7
-    },
-    {
-        "k":1,
-        "linear_digit":1,
-        "node_features":16,
-        "filters":16,
-        "lr":0.01,
-        "lags":32,
-        "train_ratio":0.9
-    },
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.5
+    # },
+    # Error
+    # mat1 and mat2 shapes cannot be multiplied (1068x32 and 16x16)
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+    # mat1 and mat2 shapes cannot be multiplied (1068x32 and 16x16)
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.9
+    # },
+    # Error
+    # mat1 and mat2 shapes cannot be multiplied (1068x32 and 16x16)
 ]
 print(tests)
 print(len(tests))
