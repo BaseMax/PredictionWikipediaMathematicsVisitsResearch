@@ -1,26 +1,27 @@
-# SET NUMBA_ENABLE_CUDASIM=1
-from numba import cuda
-# print(cuda.gpus)
-# device_id = 0
-# cuda.select_device(device_id)
-
-import torch
-print(torch.cuda.is_available())
-
-import tensorflow as tf
-print(tf.test.gpu_device_name())
-
-from torch_geometric_temporal.dataset import WikiMathsDatasetLoader
-from torch_geometric_temporal.signal import temporal_signal_split
-
-loader = WikiMathsDatasetLoader()
-
 import time
 import torch
 from tqdm import tqdm
+from numba import cuda
+import tensorflow as tf
 import torch.nn.functional
 import torch.nn.functional as F
 from torch_geometric_temporal.nn.recurrent import GConvGRU
+from torch_geometric_temporal.dataset import WikiMathsDatasetLoader
+from torch_geometric_temporal.signal import temporal_signal_split
+
+# SET NUMBA_ENABLE_CUDASIM=1
+print(cuda.gpus)
+# device_id = 0
+# cuda.select_device(device_id)
+
+print(torch.cuda.is_available())
+
+print(tf.test.gpu_device_name())
+
+print("__version__:", torch.__version__)
+
+loader = WikiMathsDatasetLoader()
+
 
 class RecurrentGCN(torch.nn.Module):
     def __init__(self, node_features, filters, k, linear_digit):
@@ -139,15 +140,15 @@ tests = [
     # 0.8543722629547119
     # Execution time in seconds: 1216.9463980197906
 
-    {
-        "k":2,
-        "linear_digit":1,
-        "node_features":14*3,
-        "filters":32,
-        "lr":0.01,
-        "lags":14*3,
-        "train_ratio":0.5
-    },
+    # {
+    #     "k":2,
+    #     "linear_digit":1,
+    #     "node_features":14*3,
+    #     "filters":32,
+    #     "lr":0.01,
+    #     "lags":14*3,
+    #     "train_ratio":0.5
+    # },
     # {'k': 2, 'linear_digit': 1, 'node_features': 42, 'filters': 32, 'lr': 0.01, 'lags': 42, 'train_ratio': 0.5}
     # 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [18:16<00:00, 21.93s/it]
     # MSE: 0.8399
@@ -156,16 +157,23 @@ tests = [
     # Execution time in seconds: 1114.2216057777405
     # ====================================
     
-    {
-        "k":2,
-        "linear_digit":1,
-        "node_features":14*2,
-        "filters":32,
-        "lr":0.01,
-        "lags":14*2,
-        "train_ratio":0.5
-    },
-
+    # {
+    #     "k":2,
+    #     "linear_digit":1,
+    #     "node_features":14*2,
+    #     "filters":32,
+    #     "lr":0.01,
+    #     "lags":14*2,
+    #     "train_ratio":0.5
+    # },
+    # ====================================
+    # {'k': 2, 'linear_digit': 1, 'node_features': 28, 'filters': 32, 'lr': 0.01, 'lags': 28, 'train_ratio': 0.5}
+    # 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [17:11<00:00, 20.63s/it]
+    # MSE: 0.8465
+    # MSE: 0.8465337753
+    # 0.8465337753295898
+    # Execution time in seconds: 1050.6477363109589
+    # ====================================
 
     # ENDDDDDDDDDDDDDDDDDDDD
 
@@ -934,15 +942,267 @@ tests = [
     #     "train_ratio":0.5
     # },
 ]
+
 tests = [
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":14,
+    #     "filters":50,
+    #     "lr":0.02,
+    #     "lags":14,
+    #     "train_ratio":0.5
+    # },
+    # {'k': 1, 'linear_digit': 1, 'node_features': 14, 'filters': 50, 'lr': 0.02, 'lags': 14, 'train_ratio': 0.5}
+    # 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [07:37<00:00,  9.16s/it]
+    # MSE: 0.8964
+    # MSE: 0.8963724375
+    # 0.8963724374771118
+    # Execution time in seconds: 464.7623805999756
+    # ====================================
+
+    # dr behzad asked me....
+    # lags = 16,32,64,128,256, k=1 , lin_dig = 1, node_feature = 16, filter = 16 , lr = 0.01
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":16,
+    #     "train_ratio":0.7
+    # },
+    # {'k': 1, 'linear_digit': 1, 'node_features': 16, 'filters': 16, 'lr': 0.01, 'lags': 16, 'train_ratio': 0.7}
+    # 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [10:04<00:00, 12.09s/it]
+    # MSE: 1.4011
+    # MSE: 1.4011325836
+    # 1.401132583618164
+    # Execution time in seconds: 608.520295381546
+    # ====================================
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # RuntimeError: mat1 and mat2 shapes cannot be multiplied (1068x32 and 16x16)
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":64,
+    #     "train_ratio":0.7
+    # },
+    # RuntimeError: mat1 and mat2 shapes cannot be multiplied (1068x64 and 16x16)
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":128,
+    #     "train_ratio":0.7
+    # },
+    # RuntimeError: mat1 and mat2 shapes cannot be multiplied (1068x128 and 16x16)
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":256,
+    #     "train_ratio":0.7
+    # },
+    # RuntimeError: mat1 and mat2 shapes cannot be multiplied (1068x256 and 16x16)
+
+    # lags = 32, k=1,2,3 , lin_dig = 1, node_feature = 16, filter = 16 , lr = 0.01
     {
         "k":1,
         "linear_digit":1,
-        "node_features":14,
-        "filters":50,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":3,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+
+    # lags = 32, k=1 , lin_dig = 1, node_feature = 2,4,8,16,32, filter = 16 , lr = 0.01
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":2,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":4,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":8,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":32,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+
+    # lags = 32, k=1 , lin_dig = 1, node_feature = 16, filter = 2,4,8,16,32 , lr = 0.01
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":2,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":4,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":8,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":32,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+
+    # lags = 32, k=1 , lin_dig = 1, node_feature = 16, filter = 16, lr = 0.01, 0.02, 0.03
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":32,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":32,
         "lr":0.02,
-        "lags":14,
-        "train_ratio":0.5
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":32,
+        "lr":0.03,
+        "lags":32,
+        "train_ratio":0.7
+    },
+
+    # lags = 32, k=1 , lin_dig = 1,2,3, node_feature = 16, filter = 16 , lr = 0.01
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":2,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":3,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
     },
 ]
 print(tests)
@@ -957,28 +1217,31 @@ for test in tests:
     # print(train_dataset)
     # print(test_dataset)
 
-    startTime = time.time()
-    #####script#####
-    model = RecurrentGCN(node_features=test["node_features"], filters=test["filters"], k=test["k"], linear_digit=test["linear_digit"])
-    optimizer = torch.optim.Adam(model.parameters(), lr=test["lr"])
-    model.train()
-    for epoch in tqdm(range(50)):
-        for _time, snapshot in enumerate(train_dataset):
+    try:
+        startTime = time.time()
+        #####script#####
+        model = RecurrentGCN(node_features=test["node_features"], filters=test["filters"], k=test["k"], linear_digit=test["linear_digit"])
+        optimizer = torch.optim.Adam(model.parameters(), lr=test["lr"])
+        model.train()
+        for epoch in tqdm(range(50)):
+            for _time, snapshot in enumerate(train_dataset):
+                y_hat = model(snapshot.x, snapshot.edge_index, snapshot.edge_attr)
+                cost = torch.mean((y_hat-snapshot.y)**2)
+                cost.backward()
+                optimizer.step()
+                optimizer.zero_grad()
+        model.eval()
+        cost = 0
+        for _time, snapshot in enumerate(test_dataset):
             y_hat = model(snapshot.x, snapshot.edge_index, snapshot.edge_attr)
-            cost = torch.mean((y_hat-snapshot.y)**2)
-            cost.backward()
-            optimizer.step()
-            optimizer.zero_grad()
-    model.eval()
-    cost = 0
-    for _time, snapshot in enumerate(test_dataset):
-        y_hat = model(snapshot.x, snapshot.edge_index, snapshot.edge_attr)
-        cost = cost + torch.mean((y_hat-snapshot.y)**2)
-    cost = cost / (_time+1)
-    cost = cost.item()
-    print("MSE: {:.4f}".format(cost))
-    print("MSE: {:.10f}".format(cost))
-    print(cost)
-    #####script#####
-    executionTime = (time.time() - startTime)
-    print('Execution time in seconds: ' + str(executionTime))
+            cost = cost + torch.mean((y_hat-snapshot.y)**2)
+        cost = cost / (_time+1)
+        cost = cost.item()
+        print("MSE: {:.4f}".format(cost))
+        print("MSE: {:.10f}".format(cost))
+        print(cost)
+        #####script#####
+        executionTime = (time.time() - startTime)
+        print('Execution time in seconds: ' + str(executionTime))
+    except:
+        print("Error!\n")
