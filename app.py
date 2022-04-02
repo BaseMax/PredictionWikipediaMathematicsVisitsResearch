@@ -1025,28 +1025,293 @@ tests = [
     # RuntimeError: mat1 and mat2 shapes cannot be multiplied (1068x256 and 16x16)
 
     # lags = 32, k=1,2,3 , lin_dig = 1, node_feature = 16, filter = 16 , lr = 0.01
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # {
+    #     "k":2,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # {
+    #     "k":3,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # lags = 32, k=1 , lin_dig = 1, node_feature = 2,4,8,16,32, filter = 16 , lr = 0.01
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":2,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":4,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":8,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":32,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # {'k': 1, 'linear_digit': 1, 'node_features': 32, 'filters': 16, 'lr': 0.01, 'lags': 32, 'train_ratio': 0.7}
+    # 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [10:03<00:00, 12.08s/it]
+    # MSE: 1.6347
+    # MSE: 1.6346751451
+    # 1.634675145149231
+    # Execution time in seconds: 607.8879504203796
+
+    # lags = 32, k=1 , lin_dig = 1, node_feature = 16, filter = 2,4,8,16,32 , lr = 0.01
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":2,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":4,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":8,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":32,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # lags = 32, k=1 , lin_dig = 1, node_feature = 16, filter = 16, lr = 0.01, 0.02, 0.03
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":32,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":32,
+    #     "lr":0.02,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":32,
+    #     "lr":0.03,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # lags = 32, k=1 , lin_dig = 1,2,3, node_feature = 16, filter = 16 , lr = 0.01
+    # {
+    #     "k":1,
+    #     "linear_digit":1,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # {
+    #     "k":1,
+    #     "linear_digit":2,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+    # {
+    #     "k":1,
+    #     "linear_digit":3,
+    #     "node_features":16,
+    #     "filters":16,
+    #     "lr":0.01,
+    #     "lags":32,
+    #     "train_ratio":0.7
+    # },
+    # Error
+
+
+
+
+    # My change refer to dr. behzad tests
     {
         "k":1,
         "linear_digit":1,
         "node_features":16,
         "filters":16,
         "lr":0.01,
-        "lags":32,
+        "lags":16,
         "train_ratio":0.7
     },
+
     {
-        "k":2,
+        "k":1,
         "linear_digit":1,
-        "node_features":16,
+        "node_features":64,
+        "filters":16,
+        "lr":0.01,
+        "lags":64,
+        "train_ratio":0.7
+    },
+
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":128,
+        "filters":16,
+        "lr":0.01,
+        "lags":128,
+        "train_ratio":0.7
+    },
+
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":256,
+        "filters":16,
+        "lr":0.01,
+        "lags":256,
+        "train_ratio":0.7
+    },
+
+    # lags = 32, k=1,2,3 , lin_dig = 1, node_feature = 16, filter = 16 , lr = 0.01
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":32,
         "filters":16,
         "lr":0.01,
         "lags":32,
         "train_ratio":0.7
     },
+
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":32,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
+
     {
         "k":3,
         "linear_digit":1,
-        "node_features":16,
+        "node_features":32,
         "filters":16,
         "lr":0.01,
         "lags":32,
@@ -1060,43 +1325,37 @@ tests = [
         "node_features":2,
         "filters":16,
         "lr":0.01,
-        "lags":32,
+        "lags":2,
         "train_ratio":0.7
     },
+
     {
         "k":1,
         "linear_digit":1,
         "node_features":4,
         "filters":16,
         "lr":0.01,
-        "lags":32,
+        "lags":4,
         "train_ratio":0.7
     },
+
     {
         "k":1,
         "linear_digit":1,
         "node_features":8,
         "filters":16,
         "lr":0.01,
-        "lags":32,
+        "lags":8,
         "train_ratio":0.7
     },
+
     {
         "k":1,
         "linear_digit":1,
         "node_features":16,
         "filters":16,
         "lr":0.01,
-        "lags":32,
-        "train_ratio":0.7
-    },
-    {
-        "k":1,
-        "linear_digit":1,
-        "node_features":32,
-        "filters":16,
-        "lr":0.01,
-        "lags":32,
+        "lags":16,
         "train_ratio":0.7
     },
 
@@ -1107,43 +1366,47 @@ tests = [
         "node_features":16,
         "filters":2,
         "lr":0.01,
-        "lags":32,
+        "lags":16,
         "train_ratio":0.7
     },
+
     {
         "k":1,
         "linear_digit":1,
         "node_features":16,
         "filters":4,
         "lr":0.01,
-        "lags":32,
+        "lags":16,
         "train_ratio":0.7
     },
+
     {
         "k":1,
         "linear_digit":1,
         "node_features":16,
         "filters":8,
         "lr":0.01,
-        "lags":32,
+        "lags":16,
         "train_ratio":0.7
     },
+
     {
         "k":1,
         "linear_digit":1,
         "node_features":16,
         "filters":16,
         "lr":0.01,
-        "lags":32,
+        "lags":16,
         "train_ratio":0.7
     },
+
     {
         "k":1,
         "linear_digit":1,
         "node_features":16,
         "filters":32,
         "lr":0.01,
-        "lags":32,
+        "lags":16,
         "train_ratio":0.7
     },
 
@@ -1154,25 +1417,27 @@ tests = [
         "node_features":16,
         "filters":32,
         "lr":0.01,
-        "lags":32,
+        "lags":16,
         "train_ratio":0.7
     },
+
     {
         "k":1,
         "linear_digit":1,
         "node_features":16,
         "filters":32,
         "lr":0.02,
-        "lags":32,
+        "lags":16,
         "train_ratio":0.7
     },
+
     {
         "k":1,
         "linear_digit":1,
         "node_features":16,
         "filters":32,
         "lr":0.03,
-        "lags":32,
+        "lags":16,
         "train_ratio":0.7
     },
 
@@ -1183,27 +1448,31 @@ tests = [
         "node_features":16,
         "filters":16,
         "lr":0.01,
-        "lags":32,
+        "lags":16,
         "train_ratio":0.7
     },
+
     {
         "k":1,
         "linear_digit":2,
         "node_features":16,
         "filters":16,
         "lr":0.01,
-        "lags":32,
+        "lags":16,
         "train_ratio":0.7
     },
+
     {
         "k":1,
         "linear_digit":3,
         "node_features":16,
         "filters":16,
         "lr":0.01,
-        "lags":32,
+        "lags":16,
         "train_ratio":0.7
     },
+
+
 ]
 print(tests)
 print(len(tests))
