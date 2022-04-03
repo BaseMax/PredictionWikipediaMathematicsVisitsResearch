@@ -71,6 +71,8 @@ Number of daily visits of Wikipedia mathematics topics with Neural Machine Learn
 |61|64|70% | 1 | 1 | 64 | 64 | 0.01 | 653s | 1.5570083856582642 |
 |62|64|70% | 1 | 1 | 64 | 128 | 0.01 | 697s | 1.526889443397522 |
 |63|256|90% | 3 | 1 | 256 | 2 | 0.01 | 4868s | 0.6845269799232483 |
+|64|256|90% | 3 | 1 | 256 | 2 | 0.05 | xxxxx | xxxxx |
+|65|256|90% | 3 | 1 | 256 | 4 | 0.01 | xxxxx | xxxxx |
 
 ## Authors
 
