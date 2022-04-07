@@ -92,7 +92,7 @@ Number of Daily Visits of Wikipedia Mathematics Topics using Graph-based Convolu
 
   - University of Kashan, Kashan, Iran
 
-  - alim@kashanu.ac.ir, alim.ir@ieee.org
+  - alim [at] kashanu.ac.ir
 
 - **Dr. Behzad Soleimani Neysiani**
 
