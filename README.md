@@ -94,7 +94,7 @@ Number of Daily Visits of Wikipedia Mathematics Topics using Graph-based Convolu
 
   - alim@kashanu.ac.ir, alim.ir@ieee.org
 
-- ** Dr. Behzad Soleimani Neysiani**
+- **Dr. Behzad Soleimani Neysiani**
 
   - Technical Soldier, Department of Research and Development
 
