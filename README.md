@@ -1,8 +1,8 @@
 # Wikipedia Mathematics
 
-## Improving Prediction of Daily Visits of Wikipedia Mathematics Topics using Graph Neural Networks
+## Improving Performance of Daily Visits Prediction of Wikipedia Mathematics Topics
 
-Number of daily visits of Wikipedia mathematics topics with Neural Machine Learning Model
+Number of Daily Visits of Wikipedia Mathematics Topics using Graph-based Convolutional Neural Network as a Robust Machine Learning Model
 
 ## Benchmark
 
@@ -86,14 +86,6 @@ Number of daily visits of Wikipedia mathematics topics with Neural Machine Learn
 
 ## Authors
 
-- **Behzad Soleimani Neysiani**
-
-  - Technical Soldier, Department of Research and Development
-
-  - Ava Aria Information Company, Demis Holding, Isfahan, Iran,
-
-  - b.soleimani@demisco.com
-
 - **Seyyed Ali Mohammadiyeh**
 
   - Department of Pure Mathematics, Faculty of Mathematical Sciences
@@ -101,3 +93,11 @@ Number of daily visits of Wikipedia mathematics topics with Neural Machine Learn
   - University of Kashan, Kashan, Iran
 
   - alim@kashanu.ac.ir, alim.ir@ieee.org
+
+- ** Dr. Behzad Soleimani Neysiani**
+
+  - Technical Soldier, Department of Research and Development
+
+  - Ava Aria Information Company, Demis Holding, Isfahan, Iran,
+
+  - b.soleimani [at] demisco.com
