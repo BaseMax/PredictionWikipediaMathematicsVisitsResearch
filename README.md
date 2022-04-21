@@ -1,6 +1,6 @@
 # Wikipedia Mathematics
 
-## Improving Performance of Daily Visits Prediction of Wikipedia Mathematics Topics
+## Improving Prediction of Daily Visits of Wikipedia Mathematics Topics using Graph Neural Networks
 
 Number of Daily Visits of Wikipedia Mathematics Topics using Graph-based Convolutional Neural Network as a Robust Machine Learning Model
 
