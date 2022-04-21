@@ -4,6 +4,12 @@
 
 Number of Daily Visits of Wikipedia Mathematics Topics using Graph-based Convolutional Neural Network as a Robust Machine Learning Model
 
+#### Abstract
+
+Spatiotemporal  signal processing is one of the complex and hot topics especially in web mining like web traffics analysis. The web pages and their links are a graph and their visits or content can be a signal. The PyTorch Geometric Temporal is introduced for spatiotemporal  signal mining. This study analyze Wikipedia mathematics pages using PyTorch Geometric Temporal library to improve their visits prediction during the time using grid search for parameter adjustment. The results show 1.15% relative improvement for GConvGRU algorithm versus basic related work which published the library.
+
+**Keywords**— Web Mining; Traffic Prediction; Graph Convolutional Network (GCN).
+
 ## Benchmark
 
 | # | lags | train ratio | k  | linear digit | node features | filters |  lr  | epoch |  time  |  error  |
