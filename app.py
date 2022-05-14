@@ -948,9 +948,7 @@ for test in tests:
             cost = cost + torch.mean((y_hat-snapshot.y)**2)
         cost = cost / (_time+1)
         cost = cost.item()
-        # print("MSE: {:.4f}".format(cost))
-        # print("MSE: {:.10f}".format(cost))
-        print(cost)
+        print("MSE: " + str(cost))
         #####script#####
         executionTime = (time.time() - startTime)
         print('Execution time in seconds: ' + str(executionTime))
