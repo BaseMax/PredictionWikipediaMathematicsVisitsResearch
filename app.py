@@ -37,60 +37,60 @@ class RecurrentGCN(torch.nn.Module):
         return h
 
 tests = [
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":14*4,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14*4,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":14*5,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14*5,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":14*6,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14*6,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":14*7,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14*7,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":14*3,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14*3,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":14*2,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14*2,
-    #     "train_ratio":0.5
-    # },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":14*4,
+        "filters":32,
+        "lr":0.01,
+        "lags":14*4,
+        "train_ratio":0.5
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":14*5,
+        "filters":32,
+        "lr":0.01,
+        "lags":14*5,
+        "train_ratio":0.5
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":14*6,
+        "filters":32,
+        "lr":0.01,
+        "lags":14*6,
+        "train_ratio":0.5
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":14*7,
+        "filters":32,
+        "lr":0.01,
+        "lags":14*7,
+        "train_ratio":0.5
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":14*3,
+        "filters":32,
+        "lr":0.01,
+        "lags":14*3,
+        "train_ratio":0.5
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":14*2,
+        "filters":32,
+        "lr":0.01,
+        "lags":14*2,
+        "train_ratio":0.5
+    },
     {
         "k":2,
         "linear_digit":1,
@@ -226,233 +226,231 @@ tests = [
         "lags":14*4,
         "train_ratio":0.5
     },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":14*4,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14*4,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":14*5,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14*5,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":14*6,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14*6,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":14*7,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14*7,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":14*3,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":14*2,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":3,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":4,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":5,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":10,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":50,
-    #     "filters":20,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":50,
-    #     "filters":100,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":80,
-    #     "filters":100,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":80,
-    #     "filters":40,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.02,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":3,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.02,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":4,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.02,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":5,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.02,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":10,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.02,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":80,
-    #     "filters":100,
-    #     "lr":0.02,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":80,
-    #     "filters":40,
-    #     "lr":0.02,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-
-
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":50,
-    #     "lr":0.02,
-    #     "lags":14,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":16,
-    #     "filters":16,
-    #     "lr":0.01,
-    #     "lags":16,
-    #     "train_ratio":0.7
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":32,
-    #     "filters":16,
-    #     "lr":0.01,
-    #     "lags":32,
-    #     "train_ratio":0.7
-    # },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":14*4,
+        "filters":32,
+        "lr":0.01,
+        "lags":14*4,
+        "train_ratio":0.5
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":14*5,
+        "filters":32,
+        "lr":0.01,
+        "lags":14*5,
+        "train_ratio":0.5
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":14*6,
+        "filters":32,
+        "lr":0.01,
+        "lags":14*6,
+        "train_ratio":0.5
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":14*7,
+        "filters":32,
+        "lr":0.01,
+        "lags":14*7,
+        "train_ratio":0.5
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":14*3,
+        "filters":32,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":14*2,
+        "filters":32,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":3,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":4,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":5,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":10,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":50,
+        "filters":20,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":50,
+        "filters":100,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":80,
+        "filters":100,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":80,
+        "filters":40,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.02,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":3,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.02,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":4,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.02,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":5,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.02,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":10,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.02,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":80,
+        "filters":100,
+        "lr":0.02,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":80,
+        "filters":40,
+        "lr":0.02,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":50,
+        "lr":0.02,
+        "lags":14,
+        "train_ratio":0.5
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":16,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":32,
+        "filters":16,
+        "lr":0.01,
+        "lags":32,
+        "train_ratio":0.7
+    },
     {
         "k":1,
         "linear_digit":1,
@@ -651,245 +649,240 @@ tests = [
         "lags":16,
         "train_ratio":0.7
     },
-
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.3
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.4
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.6
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.7
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":14,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":14,
-    #     "train_ratio":0.9
-    # },
-
-
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":16,
-    #     "filters":16,
-    #     "lr":0.01,
-    #     "lags":16,
-    #     "train_ratio":0.3
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":16,
-    #     "filters":16,
-    #     "lr":0.01,
-    #     "lags":16,
-    #     "train_ratio":0.4
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":16,
-    #     "filters":16,
-    #     "lr":0.01,
-    #     "lags":16,
-    #     "train_ratio":0.5
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":16,
-    #     "filters":16,
-    #     "lr":0.01,
-    #     "lags":16,
-    #     "train_ratio":0.6
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":16,
-    #     "filters":16,
-    #     "lr":0.01,
-    #     "lags":16,
-    #     "train_ratio":0.7
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":16,
-    #     "filters":16,
-    #     "lr":0.01,
-    #     "lags":16,
-    #     "train_ratio":0.8
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":16,
-    #     "filters":16,
-    #     "lr":0.01,
-    #     "lags":16,
-    #     "train_ratio":0.9
-    # },
-
-
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":16,
-    #     "filters":64,
-    #     "lr":0.01,
-    #     "lags":16,
-    #     "train_ratio":0.7
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":64,
-    #     "filters":2,
-    #     "lr":0.01,
-    #     "lags":64,
-    #     "train_ratio":0.7
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":64,
-    #     "filters":4,
-    #     "lr":0.01,
-    #     "lags":64,
-    #     "train_ratio":0.7
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":64,
-    #     "filters":8,
-    #     "lr":0.01,
-    #     "lags":64,
-    #     "train_ratio":0.7
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":64,
-    #     "filters":16,
-    #     "lr":0.01,
-    #     "lags":64,
-    #     "train_ratio":0.7
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":64,
-    #     "filters":32,
-    #     "lr":0.01,
-    #     "lags":64,
-    #     "train_ratio":0.7
-    # },
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":64,
-    #     "filters":64,
-    #     "lr":0.01,
-    #     "lags":64,
-    #     "train_ratio":0.7
-    # },    
-    # {
-    #     "k":1,
-    #     "linear_digit":1,
-    #     "node_features":64,
-    #     "filters":128,
-    #     "lr":0.01,
-    #     "lags":64,
-    #     "train_ratio":0.7
-    # },
-    # {
-    #     "k":3,
-    #     "linear_digit":1,
-    #     "node_features":256,
-    #     "filters":2,
-    #     "lr":0.01,
-    #     "lags":256,
-    #     "train_ratio":0.9
-    # },
-    # {
-    #     "k":3,
-    #     "linear_digit":1,
-    #     "node_features":256,
-    #     "filters":2,
-    #     "lr":0.005,
-    #     "lags":256,
-    #     "train_ratio":0.9
-    # },
-    # {
-    #     "k":3,
-    #     "linear_digit":1,
-    #     "node_features":256,
-    #     "filters":4,
-    #     "lr":0.01,
-    #     "lags":256,
-    #     "train_ratio":0.9
-    # },
-    # {
-    #     "k":3,
-    #     "linear_digit":1,
-    #     "node_features":256,
-    #     "filters":2,
-    #     "lr":0.0025,
-    #     "lags":256,
-    #     "train_ratio":0.9
-    # },
-    # {
-    #     "k":3,
-    #     "linear_digit":1,
-    #     "node_features":256,
-    #     "filters":4,
-    #     "lr":0.0025,
-    #     "lags":256,
-    #     "train_ratio":0.9
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":256,
-    #     "filters":2,
-    #     "lr":0.01,
-    #     "lags":256,
-    #     "train_ratio":0.9
-    # },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.3
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.4
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.6
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":14,
+        "filters":32,
+        "lr":0.01,
+        "lags":14,
+        "train_ratio":0.9
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":16,
+        "train_ratio":0.3
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":16,
+        "train_ratio":0.4
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":16,
+        "train_ratio":0.5
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":16,
+        "train_ratio":0.6
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":16,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":16,
+        "train_ratio":0.8
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":16,
+        "lr":0.01,
+        "lags":16,
+        "train_ratio":0.9
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":16,
+        "filters":64,
+        "lr":0.01,
+        "lags":16,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":64,
+        "filters":2,
+        "lr":0.01,
+        "lags":64,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":64,
+        "filters":4,
+        "lr":0.01,
+        "lags":64,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":64,
+        "filters":8,
+        "lr":0.01,
+        "lags":64,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":64,
+        "filters":16,
+        "lr":0.01,
+        "lags":64,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":64,
+        "filters":32,
+        "lr":0.01,
+        "lags":64,
+        "train_ratio":0.7
+    },
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":64,
+        "filters":64,
+        "lr":0.01,
+        "lags":64,
+        "train_ratio":0.7
+    },    
+    {
+        "k":1,
+        "linear_digit":1,
+        "node_features":64,
+        "filters":128,
+        "lr":0.01,
+        "lags":64,
+        "train_ratio":0.7
+    },
+    {
+        "k":3,
+        "linear_digit":1,
+        "node_features":256,
+        "filters":2,
+        "lr":0.01,
+        "lags":256,
+        "train_ratio":0.9
+    },
+    {
+        "k":3,
+        "linear_digit":1,
+        "node_features":256,
+        "filters":2,
+        "lr":0.005,
+        "lags":256,
+        "train_ratio":0.9
+    },
+    {
+        "k":3,
+        "linear_digit":1,
+        "node_features":256,
+        "filters":4,
+        "lr":0.01,
+        "lags":256,
+        "train_ratio":0.9
+    },
+    {
+        "k":3,
+        "linear_digit":1,
+        "node_features":256,
+        "filters":2,
+        "lr":0.0025,
+        "lags":256,
+        "train_ratio":0.9
+    },
+    {
+        "k":3,
+        "linear_digit":1,
+        "node_features":256,
+        "filters":4,
+        "lr":0.0025,
+        "lags":256,
+        "train_ratio":0.9
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":256,
+        "filters":2,
+        "lr":0.01,
+        "lags":256,
+        "train_ratio":0.9
+    },
     {
         "k":2,
         "linear_digit":1,
@@ -908,24 +901,24 @@ tests = [
         "lags":256,
         "train_ratio":0.9
     },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":256,
-    #     "filters":2,
-    #     "lr":0.005,
-    #     "lags":256,
-    #     "train_ratio":0.9
-    # },
-    # {
-    #     "k":2,
-    #     "linear_digit":1,
-    #     "node_features":256,
-    #     "filters":4,
-    #     "lr":0.01,
-    #     "lags":256,
-    #     "train_ratio":0.9
-    # },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":256,
+        "filters":2,
+        "lr":0.005,
+        "lags":256,
+        "train_ratio":0.9
+    },
+    {
+        "k":2,
+        "linear_digit":1,
+        "node_features":256,
+        "filters":4,
+        "lr":0.01,
+        "lags":256,
+        "train_ratio":0.9
+    },
 ]
 print(tests)
 print(len(tests))
