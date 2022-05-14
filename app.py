@@ -27,11 +27,6 @@ class RecurrentGCN(torch.nn.Module):
     def __init__(self, node_features, filters, k, linear_digit):
         super(RecurrentGCN, self).__init__()
         self.recurrent = GConvGRU(node_features, filters, k)
-        # 100%|██████████| 50/50 [21:05<00:00, 25.30s/it]
-        # MSE: 0.7935
-        # now: 100%|██████████| 50/50 [20:35<00:00, 24.72s/it]
-        # MSE: 0.7763
-        # 3m 4s
         self.linear = torch.nn.Linear(filters, linear_digit)
 
     def forward(self, x, edge_index, edge_weight):
