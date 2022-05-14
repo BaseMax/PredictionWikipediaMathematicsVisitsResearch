@@ -917,7 +917,6 @@ tests = [
 loader = WikiMathsDatasetLoader()
 
 for test in tests:
-    print("====================================")
     print(test)
     dataset = loader.get_dataset(lags=test["lags"])
     train_dataset, test_dataset = temporal_signal_split(dataset, train_ratio=test["train_ratio"])
@@ -947,3 +946,4 @@ for test in tests:
         print('Execution time in seconds: ' + str(executionTime))
     except Exception as e:
         print("Error!\n", e)
+    print("====================================")
