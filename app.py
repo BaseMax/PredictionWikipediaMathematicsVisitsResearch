@@ -13,15 +13,9 @@ from torch_geometric_temporal.signal import temporal_signal_split
 print(cuda.gpus)
 # device_id = 0
 # cuda.select_device(device_id)
-
 print(torch.cuda.is_available())
-
 print(tf.test.gpu_device_name())
-
 print("__version__:", torch.__version__)
-
-loader = WikiMathsDatasetLoader()
-
 
 class RecurrentGCN(torch.nn.Module):
     def __init__(self, node_features, filters, k, linear_digit):
@@ -920,8 +914,8 @@ tests = [
         "train_ratio":0.9
     },
 ]
-print(tests)
-print(len(tests))
+
+loader = WikiMathsDatasetLoader()
 
 for test in tests:
     print("====================================")
